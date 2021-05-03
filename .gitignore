@@ -1,0 +1,5 @@
+.idea/*
+dist
+/**/mysql.ini
+__pycache__
+*.egg-info/*
