@@ -5,6 +5,9 @@ This is a [Dynamic Inventory](http://docs.ansible.com/ansible/intro_dynamic_inve
 It was written because we maintain a lot of servers and static inventory files did not meet our demand, and we like MySQL.
 
 ## Usage
+
+See [JOSEs_NOTES](https://github.com/jrosa770/ansible-dynamic-inventory-mysql/blob/main/JOSEs_NOTES.md) for a quicker how-to.
+
 ### Work with ansible and ansible-playbook
 Simply call the script like the following
 
