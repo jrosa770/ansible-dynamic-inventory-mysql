@@ -14,6 +14,18 @@ GRANT ALL ON *.* TO 'myadmin'@'%';
 flush privileges;
 ```
 
+> Edit `tables.sql` if needed
+
+```sql
+-- CREATE DATABASE
+--- Change if needed and update mysql.ini
+DROP DATABASE IF EXISTS ansible_inventory;
+
+CREATE DATABASE ansible_inventory;
+
+USE ansible_inventory;
+```
+
 > Edit `mysql.ini`
 
 ```ini
@@ -27,11 +39,14 @@ port = 3306
 ```
 
 ```sh
+# Build and Install Packages
 python ansible-dynamic-inventory-mysql/setup.py build
 python ansible-dynamic-inventory-mysql/setup.py install
 
+# CD Into Cloned Directory
 cd ansible-dynamic-inventory-mysql
 
+# Install Dtabase
 mysql -u myadmin -pMy_P@55-@dmin ansible_inventory < tables.sql 
 
 # Add Parent Group
