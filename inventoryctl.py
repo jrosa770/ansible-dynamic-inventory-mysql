@@ -524,7 +524,7 @@ class InventoryCtl(object):
 
     def _prompt(self, query):
         sys.stdout.write('''%s [y/n]: ''' % query)
-        val = input()
+        val = raw_input()
         try:
             ret = strtobool(val)
         except ValueError:
